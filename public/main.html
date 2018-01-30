@@ -19,7 +19,7 @@
                 <a href="#" data-activates="slide-out" class="button-collapse show-on-med-and-down"><i class="material-icons">menu</i></a>
 
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="#" id="searchNav">Search</a></li>
+                    <li><a href="#" id="searchNav">News</a></li>
                     <li><a href="#" id="myProfile">My Profile</a></li>
                     <li><a href="#" id="logout">Logout</a></li>
                 </ul>
@@ -31,7 +31,7 @@
         <!--sideNav hidden on large scrrens-->
 
         <ul id="slide-out" class="side-nav hide-on-large blue-grey darken-2">
-            <li><a href="/search" class="white-text" id="searchSide">Search</a></li>
+            <li><a href="/search" class="white-text" id="searchSide">News</a></li>
             <li><a href="/userProfile" class="white-text" id="myProfileSide">My Profile</a></li>
             <li><a href="/faq" class="white-text" id="faqSide">FAQ</a></li>
             <li><a href="/logout" class="white-text" id="logoutSide">Logout</a></li>
@@ -49,17 +49,31 @@
                         <div class="row">
                             <div class="col m12">
                                 <ul class="collapsible popout" data-collapsible="accordion">
-                                    <li>
-                                        <div class="collapsible-header"><i class="material-icons">place</i>Location</div>
+                                   <li>
+                                        <div class="collapsible-header"><i class="material-icons">headset</i>Location</div>
                                         <div class="collapsible-body white">
-                                            <span>
-                                                <div class="row">
-                                                    <div class="input-field col m12">
-                                                      <input id="locationSearchInput" type="text" class="validate">
-                                                      <label for="locationSearchInput">Location</label>
-                                                    </div>
-                                                </div>
-                                            </span>
+                                            <form action="#">
+                                                <p>
+                                                    <input class="with-gap" name="group3" type="radio" id="search10" value="16.0934" />
+                                                    <label for="search10" class="black-text">10 miles</label>
+                                                </p>
+                                                <p>
+                                                    <input class="with-gap" name="group3" type="radio" id="search25" value="40.2336" />
+                                                    <label for="search25" class="black-text">25 miles</label>
+                                                </p>
+                                                <p>
+                                                    <input class="with-gap" name="group3" type="radio" id="search50" value="80.4672" />
+                                                    <label for="seach50" class="black-text">50 miles</label>
+                                                </p>
+                                                <p>
+                                                    <input class="with-gap" name="group1" type="radio" id="search75" value="120.701" />
+                                                    <label for="search75" class="black-text">75 miles</label>
+                                                </p>
+                                                <p>
+                                                    <input class="with-gap" name="group3" type="radio" id="search100" value="160.934" />
+                                                    <label for="search100" class="black-text">100 miles</label>
+                                                </p>
+                                            </form>
                                         </div>
                                     </li>
                                     <li>
@@ -175,12 +189,12 @@
 
 
 
-                <!-- profile modal -->
+                 <!-- profile modal -->
                 <div id="viewProfileModal" class="modal blue-grey darken-2">
                     <div class="modal-content">
                         <input id="toSearch" type="hidden">
                         <!--<h4 id="accountName"></h4>-->
-                        <div class="col m12" id="userStuff">
+                        <div class="col m12">
                             <h3 id="accountHead">Account Info</h3>
                             <h5 class="white-text">Username: <span class="accountInfo" id="username"></span></h5>
                             <h5 class="white-text">Name: <span class="accountInfo" id="name"></span></h5>
@@ -189,6 +203,9 @@
                             <h5 class="white-text">Prefered Genre: <span class="accountInfo" id="genre"></span></h5>
                             <h5 class="white-text">In a Band: <span class="accountInfo" id="inBand"></span></h5>
                             <h5 class="white-text">About: <span class="accountInfo" id="about"></span></h5>
+                            <div id="userStuff1"></div>
+                            <div id="userStuff2"></div>
+                            <div id="userStuff3"></div>
                                 
 
 
