@@ -42,42 +42,17 @@
         </ul>
 
         <!--end side nav-->
-
-        <div id="modal2" class="modal blue-grey darken-2">
-            <div class="modal-content">
-                <container id="boxing" <div id="body3">
-                    <progress value="0" max="100" id="uploader">0%</progress>
-                    <input type="file" value="upload" id="fileButton" />
-                </container>
+<div id="modal2" class="modal blue-grey darken-2">
+    <h4>Edit/Add Photos</h4>
+    <div id="body3">
+    <progress value="0" max="100" id="uploader">0%</progress>
+ <input type="file" value="upload" id="fileButton" />
+  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
             </div>
-        </div>
-
-
-        <style media="screen">
-            #body3 {
-                display: flex;
-                min-height: 100vh;
-                width: 100%;
-                padding: 0;
-                margin: 0;
-                align-content: center;
-                justify-content: center;
-                flex-direction: column;
-            }
-
-            #uploader {
-                -webkit-apperance: none;
-                appearance: none;
-                width: 50%;
-                margin-bottom: 10px;
-            }
-        </style>
-        <div id="body3">
-            <progress value="0" max="100" id="uploader">0%</progress>
-            <input type="file" value="upload" id="fileButton" />
-
-
-        </div>
+            
+    <div class="modal-footer">
+      
 
 
 
@@ -107,7 +82,7 @@
                                 <h5 class="white-text">Email: <span class="accountInfo" id="email"></span></h5>
                                 <h5 class="white-text">Instrument: <span class="accountInfo" id="instrument"></span></h5>
                                 <h5 class="white-text">Prefered Genre: <span class="accountInfo" id="genre"></span></h5>
-                                <h5 class="white-text">Looking to jame with: <span class="accountInfo" id="searchingFor"></span></h5>
+                                <h5 class="white-text">Looking to jam with: <span class="accountInfo" id="searchingFor"></span></h5>
                                 <h5 class="white-text">In a Band: <span class="accountInfo" id="inBand"></span></h5>
                                 <h5 class="white-text">About: <span class="accountInfo" id="about"></span></h5>
                                
@@ -115,10 +90,13 @@
                             </div>
 
 
+
+                            <button data-target="modal2" id="editImages" class="btn modal-trigger">Edit/Add Photo</button>
+
                             <!-- edit modal trigger -->
                             <button data-target="modal1" id="editProfile" class="btn modal-trigger">Edit My Account</button>
                             <!-- deleteModal trigger -->
-                            <button data-target="deleteModal" class="btn modal-trigger">Delete My Account</button>
+                            <button data-target="deleteModal" id="deleteBtn" class="btn modal-trigger">Delete My Account</button>
                         </div>
                     </div>
                 </div>
@@ -203,7 +181,6 @@
             <div class="input-field col m12">
                 <select id="genreModal">
 
-
                   <option value = "" disabled selected>What genre(s) are you into?</option>
                   <option value = "Metal">Metal</option>
                   <option value = "Jazz">Jazz</option>
@@ -212,7 +189,6 @@
                   <option value = "Blues">Blues</option>
                   <option value = "Country">Country</option>
             </select>
-
 
             </div>
         </div>
@@ -229,7 +205,6 @@
             </div>
         </div>
         <div class="row">
-
 
             <div class="input-field col m12">
                 <input id="soundCloudModal" type="text" class="validate">
@@ -254,7 +229,6 @@
 
             </div>
         </div>
-
 
         </form>
     </div>
@@ -284,21 +258,11 @@
     <!--end modal-->
 
 
-     <footer class="page-footer blue-grey darken-2 ">
-     
+    <footer class="page-footer blue-grey darken-2 ">
         <div class="footer-copyright ">
             <div class="container white-text ">
-                   <div class="row">
-                       <div class="col m4 footLink">
                 © 2018
-                </div>
-                 <div class="col m4">
-                <div id="advert"></div>
-                </div>
-                 <div class="col m4">
-                <a class="white-text text-lighten-4 right footLink" href='/faq'>FAQ</a>
-                </div>
-            </div>
+                <a class="white-text text-lighten-4 right " href='/faq'>FAQ</a>
             </div>
         </div>
     </footer>
