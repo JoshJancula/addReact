@@ -16,7 +16,7 @@ function renderNews(data) {
             console.log("----------------------"+JSON.stringify(result))
             var div1 = $("<div>").append(
           "<div class='row'>" +
-          "<div class='col m10'>" + "<div class='card horizontal'>" + "<div class='card-image'>" + "<img src="+ result.image + ">" +
+          "<div class='col m10'>" + "<div class='card horizontal z-depth-4' id ='newsCard' >" + "<div class='card-image'>" + "<img src="+ result.image + ">" +
           "</div>" +
           "<div class='card-stacked'>" + "<div class='card-content'>" +
           "<h2>" + result.title + "</h2>" +

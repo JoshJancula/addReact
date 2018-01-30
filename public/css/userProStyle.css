@@ -196,3 +196,21 @@ img {
     background-color: lightBlue;
     opacity: .5;
 }
+
+#newsCard:hover{
+    opacity: .5;
+}
+
+#profilePic:hover{
+ filter: grayscale(1);
+}
+
+.accountInfo{
+    color: gold;
+    
+    text-align: center;
+}
+
+.infoRow{
+    text-shadow: 2px 2px black;
+}
