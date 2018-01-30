@@ -16,7 +16,7 @@ function renderNews(data) {
             console.log("----------------------"+JSON.stringify(result))
             var div1 = $("<div>").append(
           "<div class='row'>" +
-          "<div class='col m10'>" + "<div class='card horizontal'>" + "<div class='card-image'>" + "<img src="+ result.image + ">" +
+          "<div class='col l10 s12'>" + "<div class='card'>" + "<div class='card-image col l4 s12'>" + "<img src="+ result.image + ">" +
           "</div>" +
           "<div class='card-stacked'>" + "<div class='card-content'>" +
           "<h2>" + result.title + "</h2>" +
@@ -28,7 +28,7 @@ function renderNews(data) {
                 );
                 
                 $("#news").append(div1);
-        })
+        });
         
       }
     

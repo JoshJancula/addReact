@@ -1,3 +1,7 @@
+html { 
+    min-height: 100%;
+}
+
 #userImage {
     padding: 80px;
     margin-top: 50px;
@@ -49,7 +53,7 @@ margin-bottom: 10px;
 
 body {
     display: flex;
-    min-height: 100vh;
+    min-height: 100%;
     flex-direction: column;
     background-image: url(http://clipart-library.com/images/6Ty5GE6ac.jpg);
     background-repeat: no-repeat;
@@ -59,6 +63,7 @@ body {
 }
 
 main {
+    min-height: 100%;
     flex: 1 0 auto;
 }
 
@@ -87,13 +92,10 @@ main {
     color: black!important;
 }
 footer{
+    
     opacity: .9;
 }
 
-/*.footLink  {*/
-/*    margin-top: 30%;*/
-   
-/*}*/
 
 [type="radio"]:checked+label:after,
 [type="radio"].with-gap:checked+label:after {
@@ -108,7 +110,7 @@ footer{
 
 #stats {
     overflow: auto;
-    position: absolute;
+    position: scroll;
     height: 550px;
     margin-bottom: 10px;
     margin-right: 10px;
@@ -165,29 +167,51 @@ footer{
     background-image: url(http://clipart-library.com/images/6Ty5GE6ac.jpg)
 }
 
-#filebutton{
-    
-}
-
-@media screen and (max-width: 750px) and (min-width: 200px) {
-    .card-image{
-        height: 300px;
-        width: 250px;
-        margin: 5px 5px 5px 5px;
-    }
-    
-}
-
-/*.gcLogo {*/
-/*height: 20px;*/
-/*    width: 20px;*/
-/*}*/
 
 
 img {
     display: block;
-    margin-top: 5%;
+    /*margin-top: 5%;*/
     margin-left: auto;
     margin-right: auto;
     height: 200px
+}
+
+
+#gcLogo {
+  
+  height: 80px;
+  width: 150px;
+}
+
+
+@media screen and (max-width: 750px) and (min-width: 200px) {
+    .card-image{
+        height: 150px;
+        width: 100px;
+        margin: 5px 5px 5px 5px;
+    }
+    #gcLogo {
+  
+  height: 80px;
+  width: 150px;
+  margin-left: 8%;
+ 
+}
+
+
+    
+}
+
+
+
+
+
+
+#editImage,
+#editProfile,
+#deleteBtn {
+   display: inline-block;
+   margin: auto;
+   width: 25%;
 }
