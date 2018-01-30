@@ -191,3 +191,8 @@ img {
     margin-right: auto;
     height: 200px
 }
+
+#userCard:hover{
+    background-color: lightBlue;
+    opacity: .5;
+}

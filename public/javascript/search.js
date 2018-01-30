@@ -94,7 +94,7 @@ window.onload = function() {
 
         var div = $("<div>").append(
           "<div class='row'>" +
-          "<div class='col l10 s12'>" + "<div class='card'>" + "<div class='card-image col l4 s12'>" + "<img src=" + result.userImage + ">" +
+          "<div class='col l10 s12'>" + "<div class='card' id = 'userCard'>" + "<div class='card-image col l4 s12'>" + "<img src=" + result.userImage + ">" +
           "</div>" +
           "<div class='card-stacked'>" + "<div class='card-content'>" +
           "<h2>" + result.userFirstName + "</h2>" +
