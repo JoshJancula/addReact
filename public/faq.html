@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="./css/loginStyle.css" type="text/css" />
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <nav class="blue-grey darken-2">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo" style="margin-left: 10px;">Jam-Clash</a>
+                <a href="#" data-activates="slide-out" class="button-collapse show-on-med-and-down"><i class="material-icons">menu</i></a>
+
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#" id="myProfile">My Profile</a></li>
+                    <li><a href="#" id="main">Main</a></li>
+                    <li><a href="#" id="logout">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+
+      
+        
+         <!--sideNav hidden on large scrrens-->
+      
+        <ul id="slide-out" class="side-nav hide-on-large blue-grey darken-2">
+       <li><a href="/main" class="white-text" id="mainSide">Main</a></li>
+        <li><a href="/userProfile" class="white-text" id="myProfileSide">My Profile</a></li>
+         <li><a href="/search" class="white-text" id="sideSearch">Search</a></li>
+        <li><a href="/logout" class="white-text" id="logoutSide">Logout</a></li>
+    </ul>
+   
+    <!--end side nav-->
+
+        <div class="row">
+            <div class="container col m3"></div>
+            <div class="container col m6 center-align">
+                <div class="card blue-grey darken-2" id="questions">
+                    <div class="card-content white-text">
+                        <span class="card-title">Frequently Asked Questions</span>
+                        <h5>I'm not getting any email messages</h5>
+                        <p>If you have a yahoo or a gmail account you may need to go into your settings and enable access from less secure sites. That or nobody wants to message you.</p>
+                        <h5>My profile isn't deleting</h5>
+                        <p>Although this site is designed to work properly, sometimes things happen. Try again and if the problem persists contact the webmaster</p>
+                        <h5>What should I do if I notice any innapropriate content or activity?</h5>
+                        <p>If it is something George Carlin would have found to be offensive or obviously illegal, contact the webmaster.</p>
+                        <h5>I accidentally deleted my account, what now?</h5>
+                        <p>Sorry, we asked you if you were sure that you wanted to delete it and told you that it cannot be undone. Deal with it.</p>
+                        <h5>I am moving to another city, how will others know how close I am if I'm in a new state?</h5>
+                        <p>You can either delete and recreate your account to get a new location added to your profile. Or this application gets your current GPS location every time you search. So if your profile says you live in North Carolina but
+                            you are currently in Colorado, you will only get results within Colorado. However users in Colorado will see that you are in North Carolina so you will have to be the first to reach out.</p>
+                        <h5>My profile isn't updating....</h5>
+                        <p>First check to make sure all required fields are complete before submitting and if they are and the problem persists, contact the webmaster.</p>
+                        <h5>Why does it log me out whenever I update my profile?</h5>
+                        <p>In order to update and display your new changes you we automatically log you out and update your account. You can log right back in with no problem, sorry for the inconvenience.</p>
+                        <div class="row">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container col m3"></div>
+        </div>
+    </main>
+    
+    
+      <!-- contactWebmaster modal -->
+                <div id="contactWebmaster" class="modal blue-grey darken-2">
+                    <div class="modal-content">
+                        <h4>Message</h4>
+                        <form class="col m12">
+                            <div class="row">
+                                <div class="input-field col m12">
+                                    <input id="message" type="text" class="validate">
+                                    <label for="message">Input message here</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field">
+                                    <a href="#" id="submitMessage" class="btn waves-effect waves-light blue-grey lighten-3 col m5 offset-s1" style="margin-left: 180px; margin-top: 15px;"><span class="black-text">Send</span></a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                    </div>
+                </div>
+                <!--end modal-->
+
+     <footer class="page-footer blue-grey darken-2 ">
+     
+        <div class="footer-copyright ">
+            <div class="container white-text ">
+                   <div class="row">
+                       <div class="col m4 footLink">
+                © 2018
+                </div>
+                 <div class="col m4">
+                <div id="advert"></div>
+                </div>
+                 <div class="col m4">
+                <a class="white-text text-lighten-4 right footLink" href='/faq'>FAQ</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="./javascript/login.js"></script>
+        <script src="/js/main.6c041998.js"></script>
+
+    <script>
+        $(document).ready(function() {
+        $('.collapsible').collapsible();
+        $(".button-collapse").sideNav();
+        $('.modal').modal();
+
+        });
+    </script>
+</body>
+
+</html>

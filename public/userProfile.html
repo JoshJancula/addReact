@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/userProStyle.css" type="text/css" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+    <header></header>
+
+    <main>
+        <nav class="blue-grey darken-2">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo" style="margin-left: 10px;">Jam-Clash</a>
+                <a href="#" data-activates="slide-out" class="button-collapse show-on-med-and-down"><i class="material-icons">menu</i></a>
+
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#" id="searchNav">Search</a></li>
+                    <li><a href="#" id="main">Main</a></li>
+                    <li><a href="#" id="logout">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+        <!--sideNav hidden on large scrrens-->
+
+        <ul id="slide-out" class="side-nav hide-on-large blue-grey darken-2">
+            <li><a href="/search" class="white-text" id="searchSide">Search</a></li>
+            <li><a href="/main" class="white-text" id="myProfileSide">Main</a></li>
+            <li><a href="/faq" class="white-text" id="faqSide">FAQ</a></li>
+            <li><a href="/logout" class="white-text" id="logoutSide">Logout</a></li>
+        </ul>
+
+        <!--end side nav-->
+
+        <div id="modal2" class="modal blue-grey darken-2">
+            <div class="modal-content">
+                <container id="boxing" <div id="body3">
+                    <progress value="0" max="100" id="uploader">0%</progress>
+                    <input type="file" value="upload" id="fileButton" />
+                </container>
+            </div>
+        </div>
+
+
+        <style media="screen">
+            #body3 {
+                display: flex;
+                min-height: 100vh;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                align-content: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            #uploader {
+                -webkit-apperance: none;
+                appearance: none;
+                width: 50%;
+                margin-bottom: 10px;
+            }
+        </style>
+        <div id="body3">
+            <progress value="0" max="100" id="uploader">0%</progress>
+            <input type="file" value="upload" id="fileButton" />
+
+
+        </div>
+
+
+
+        <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+
+        <div class="row">
+            <div class="container col m1"></div>
+
+            <div class="container col m10">
+                <!--<div class = "card blue-grey darken-2" id = "userImage">-->
+
+                <div class="row">
+
+                    <div class="center-align">
+
+                        <div class="container col m6 imageBox">
+                            <img id="profilePic" class="profilePic circle responsive-img" src="">
+                            <br>
+                        </div>
+
+                        <div class="container col m6">
+                            <div class="card blue-grey darken-2 userStuff">
+                                <div id="userStuff">
+                                <h3 id="accountHead">Account Info</h3>
+                                <h5 class="white-text">Username: <span class="accountInfo" id="username"></span></h5>
+                                <h5 class="white-text">Name: <span class="accountInfo" id="name"></span></h5>
+                                <h5 class="white-text">Email: <span class="accountInfo" id="email"></span></h5>
+                                <h5 class="white-text">Instrument: <span class="accountInfo" id="instrument"></span></h5>
+                                <h5 class="white-text">Prefered Genre: <span class="accountInfo" id="genre"></span></h5>
+                                <h5 class="white-text">Looking to jame with: <span class="accountInfo" id="searchingFor"></span></h5>
+                                <h5 class="white-text">In a Band: <span class="accountInfo" id="inBand"></span></h5>
+                                <h5 class="white-text">About: <span class="accountInfo" id="about"></span></h5>
+                               
+                            </div>
+                            </div>
+
+
+                            <!-- edit modal trigger -->
+                            <button data-target="modal1" id="editProfile" class="btn modal-trigger">Edit My Account</button>
+                            <!-- deleteModal trigger -->
+                            <button data-target="deleteModal" class="btn modal-trigger">Delete My Account</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--</div>-->
+        </div>
+
+
+    </main>
+
+    <!-- Modal Structure -->
+
+
+    <div id="modal1" class="modal blue-grey darken-2">
+        <div class="modal-content">
+            <h4>Edit Profile</h4>
+            <form class="col m12">
+                <div class="row">
+                    <div class="input-field col m12">
+                        <input id="usernameModal" type="text" class="validate">
+                        <label for="username">Username</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col m12">
+                        <input id="userFirstNameModal" type="text" class="validate">
+                        <label for="firstName">First Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col m12">
+                        <input id="userLastNameModal" type="text" class="validate">
+                        <label for="lastName">Last Name</label>
+                    </div>
+                </div>
+
+        </div>
+        <div class="row">
+            <div class="input-field col m12">
+                <select id="isBandModal">
+
+                      <option value = "" disabled selected>Do you already have an existing band?</option>
+                      <option value = "Yes">Yes</option>
+                      <option value = "No">No</option>
+                </select>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col m12">
+                <select id="instrumentsPlayedModal">
+
+
+                                              <option value = "" disabled selected>What do you play?</option>
+                                              <option value = "Guitar">Guitar</option>
+                                              <option value = "Drums">Drums</option>
+                                              <option value = "Bass">Bass</option>
+                                              <option value = "Percussion">Percussion</option>
+                                              <option value = "Vocalist">Vocalist</option>
+                                              <option value = "Other">Other</option>
+
+                                        </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col m12">
+                <select id="searchingForModal">
+
+
+                                              <option value = "" disabled selected>Who are you looking to jam with?</option>
+                                              <option value = "Guitar">Guitarists</option>
+                                              <option value = "Drums">Drummers</option>
+                                              <option value = "Bass">Bassists</option>
+                                              <option value = "keyboard">Keyboard</option>
+                                              <option value = "Vocalist">Vocalists</option>
+                                        </select>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col m12">
+                <select id="genreModal">
+
+
+                  <option value = "" disabled selected>What genre(s) are you into?</option>
+                  <option value = "Metal">Metal</option>
+                  <option value = "Jazz">Jazz</option>
+                  <option value = "Hip-hop">Hip-hop</option>
+                  <option value = "Rock">Rock</option>
+                  <option value = "Blues">Blues</option>
+                  <option value = "Country">Country</option>
+            </select>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col m12">
+                <input id="aboutModal" type="text" class="validate">
+                <label for="about.....">Tell us a little about yourself.</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col m12">
+                <input id="registerEmailModal" type="email" class="validate">
+                <label for="email">Email</label>
+            </div>
+        </div>
+        <div class="row">
+
+
+            <div class="input-field col m12">
+                <input id="soundCloudModal" type="text" class="validate">
+                <label for="soundcloud">Add a link to your soundcloud</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col m12">
+                <input id="reverbNationModal" type="text" class="validate">
+                <label for="reverbNation">Or to Reverb Nation</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col m12">
+                <input id="faceBookModal" type="text" class="validate">
+                <label for="faceBook">What about FaceBook?</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field">
+                <button id="updateAccount">Update Profile</button>
+
+            </div>
+        </div>
+
+
+        </form>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+    </div>
+
+    <!-- delete modal -->
+    <div id="deleteModal" class="modal blue-grey darken-2">
+        <div class="modal-content">
+
+            <h5 class="white-text">Are you sure? This cannot be undone.<span class="accountInfo"></span></h5>
+
+
+
+
+        </div>
+
+        <div class="modal-footer">
+            <a href="#!" class="modal-action left modal-close waves-effect waves-green btn-flat">Whoops Nevermind</a>
+
+            <a href="#!" class="modal-action right modal-close waves-effect waves-green btn-flat" id="handleDelete">I'm Sure</a>
+        </div>
+    </div>
+    </div>
+    <!--end modal-->
+
+
+     <footer class="page-footer blue-grey darken-2 ">
+     
+        <div class="footer-copyright ">
+            <div class="container white-text ">
+                   <div class="row">
+                       <div class="col m4 footLink">
+                © 2018
+                </div>
+                 <div class="col m4">
+                <div id="advert"></div>
+                </div>
+                 <div class="col m4">
+                <a class="white-text text-lighten-4 right footLink" href='/faq'>FAQ</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.0.min.js" integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/userProfile.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.collapsible').collapsible();
+            $(".button-collapse").sideNav();
+
+
+        });
+    </script>
+    <script src="/js/main.6c041998.js"></script>
+
+
+
+</body>
+
+</html>

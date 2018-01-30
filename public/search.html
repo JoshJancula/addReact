@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/userProStyle.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <nav class="blue-grey darken-2">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo" style="margin-left: 10px;">Jam-Clash</a>
+                <a href="#" data-activates="slide-out" class="button-collapse show-on-med-and-down"><i class="material-icons">menu</i></a>
+
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#" id="main">Main</a></li>
+                    <li><a href="#" id="myProfile">My Profile</a></li>
+                    <li><a href="#" id="logout">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+        <!--sideNav hidden on large scrrens-->
+
+        <ul id="slide-out" class="side-nav hide-on-large blue-grey darken-2">
+            <li><a href="/main" class="white-text" id="searchSide">Search</a></li>
+            <li><a href="/userProfile" class="white-text" id="myProfileSide">My Profile</a></li>
+            <li><a href="/faq" class="white-text" id="faqSide">FAQ</a></li>
+            <li><a href="/logout" class="white-text" id="logoutSide">Logout</a></li>
+        </ul>
+
+        <!--end side nav-->
+
+
+        <div class="row">
+            <div class="col m1"></div>
+            <div class="col m10">
+                <div class="card blue-grey darken-2" id="searchCard">
+                    <div class="card-content black-text">
+                        <span class="card-title white-text center-align">Music News!</span>
+                        <div id='target'></div>
+        <button id= "delete" type=submit></button>         
+        <div id="news">
+                    </div>
+                </div>
+            </div>
+            <div class="col m1"></div>
+        </div>
+
+
+        </div>
+        </div>
+    </main>
+
+
+     <footer class="page-footer blue-grey darken-2 ">
+     
+        <div class="footer-copyright ">
+            <div class="container white-text ">
+                   <div class="row">
+                       <div class="col m4 footLink">
+                © 2018
+                </div>
+                 <div class="col m4">
+                <div id="advert"></div>
+                </div>
+                 <div class="col m4">
+                <a class="white-text text-lighten-4 right footLink" href='/faq'>FAQ</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.0.min.js" integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.collapsible').collapsible();
+            $(".button-collapse").sideNav();
+        });
+    </script>
+
+    <script src="/js/main.6c041998.js"></script>
+
+    <script src="./js/good.js"></script>
+    <script src="./js/delete.js"></script>
+
+
+
+</body>
+
+</html>

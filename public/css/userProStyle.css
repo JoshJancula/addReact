@@ -1,0 +1,170 @@
+html {
+    min-height: 100%;
+}
+
+#userImage {
+    border-radius: 60px;
+    /*padding: 80px;*/
+    margin-top: 50px;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.7), 0 10px 25px 0 rgba(0, 0, 0, 0.19);
+    opacity: .6;
+
+}
+
+
+.userInfo {
+    padding: 20px;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.7), 0 10px 25px 0 rgba(0, 0, 0, 0.19);
+    background-color: grey
+}
+
+.imageBox {
+    margin-left: 20px;
+
+}
+
+#editProfile #deleteModal {
+
+    margin-top: 5px;
+
+}
+
+body {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    background-image: url(http://clipart-library.com/images/6Ty5GE6ac.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background: linear-gradient(rgba(250, 250, 250, 0.5), rgba(250, 250, 250, 0.1)), url(http://clipart-library.com/images/6Ty5GE6ac.jpg);
+
+
+}
+
+main {
+    flex: 1 0 auto;
+    min-height: 100%;
+}
+
+#searchCard,
+#stats {
+    border-radius: 60px;
+    margin-top: 40px;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.7), 0 10px 25px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#locationSearchInput:focus,
+#profileSearchInput:focus {
+    border-bottom: 1px solid black;
+    -webkit-box-shadow: 0 1px 0 0 black;
+    -moz-box-shadow: 0 1px 0 0 black;
+    box-shadow: 0 1px 0 0 black;
+}
+
+.active {
+    color: black!important;
+}
+
+.footerLink {
+    color: black;
+}
+
+
+[type="radio"]:checked+label:after,
+[type="radio"].with-gap:checked+label:after {
+    background-color: #90a4ae;
+}
+
+[type="radio"]:checked+label:after,
+[type="radio"].with-gap:checked+label:before,
+[type="radio"].with-gap:checked+label:after {
+    border: 2px solid #90a4ae;
+}
+
+.page-footer {
+    opacity: .9;
+}
+
+
+#stats {
+    border-radius: 60px;
+    opacity: .9;
+    overflow: scroll;
+    /*position: absolute;
+    */
+    height: 550px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+#searchCard {
+    border-radius: 60px;
+    opacity: .9;
+    padding-bottom: 108px;
+    overflow: auto;
+}
+
+#profileContents {
+    opacity: .6;
+    margin-top: 60px;
+    margin-bottom: 5%;
+    opacity: .6;
+}
+
+
+#siteInfo {
+    margin-top: 10%;
+}
+
+#body3 {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 6px 6px 6px 6px;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#uploader {
+    -webkit-apperance: none;
+    appearance: none;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+#modal2 {
+    height: 500px;
+    /*display: flex;*/
+    text-align: center;
+    background-image: url(http://clipart-library.com/images/6Ty5GE6ac.jpg)
+}
+
+#filebutton {}
+
+@media screen and (max-width: 750px) and (min-width: 200px) {
+    .card-image {
+        height: 300px;
+        width: 250px;
+        margin: 5px 5px 5px 5px;
+    }
+
+}
+
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 70px;
+  
+    
+    
+}
+
+
+.footLink {
+    margin-top: 20px;
+}
